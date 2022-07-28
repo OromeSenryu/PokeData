@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import Description from './Description'
 
-const PokeThumbnail = ({id,name,image,type,height,weight,stat1,stat2,stat3,stat4,stat5,stat6,bs1,bs2,bs3,bs4,bs5,bs6}) => {
+const PokeThumbnail = ({id,name,image,type,height,weight,healthPoints,attack,defense,specialAttack,specialDefense,speed,hpBase,attackBase,
+    defenseBase,specAtkBase,specDefBase,speedBase}) => {
     const [show,setShow] = useState(false)
 
     return (
@@ -14,19 +15,19 @@ const PokeThumbnail = ({id,name,image,type,height,weight,stat1,stat2,stat3,stat4
                 {show===true?<Description 
                 weightpok={weight} 
                 heightpok={height} 
-                pokstat1={stat1}
-                pokstat2={stat2}
-                pokstat3={stat3}
-                pokstat4={stat4}
-                pokstat5={stat5}
-                pokstat6={stat6}
+                healthPoints={healthPoints}
+                attack={attack}
+                defense={defense}
+                specialAttack={specialAttack}
+                specialDefense={specialDefense}
+                speed={speed}
                 
-                posbs1={bs1}
-                posbs2={bs2}
-                posbs3={bs3}
-                posbs4={bs4}
-                posbs5={bs5}
-                posbs6={bs6}
+                hpBase={hpBase}
+                attackBase={attackBase}
+                defenseBase={defenseBase}
+                specAtkBase={specAtkBase}
+                specDefBase={specDefBase}
+                speedBase={speedBase}
                  /> : <></>}
                 
             </div>

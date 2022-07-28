@@ -32,22 +32,22 @@ function App() {
                   id = {pokemon.id}
                   name = {pokemon.name}
                   image = {pokemon.sprites.other.dream_world.front_default}
-                  type={pokemon.types[0].type.name}
-                  key={index}
+                  type = {pokemon.types[0].type.name}
+                  key = {index}
                   height = {pokemon.height}
                   weight = {pokemon.weight}
-                  stat1 = {pokemon.stats[0].stat.name}
-                  stat2 = {pokemon.stats[1].stat.name}
-                  stat3 = {pokemon.stats[2].stat.name}
-                  stat4 = {pokemon.stats[3].stat.name}
-                  stat5 = {pokemon.stats[4].stat.name}
-                  stat6 = {pokemon.stats[5].stat.name}
-                  bs1 = {pokemon.stats[0].base_stat}
-                  bs2 = {pokemon.stats[1].base_stat}
-                  bs3 = {pokemon.stats[2].base_stat}
-                  bs4 = {pokemon.stats[3].base_stat}
-                  bs5 = {pokemon.stats[4].base_stat}
-                  bs6 = {pokemon.stats[5].base_stat}
+                  healthPoints = {pokemon.stats[0].stat.name}
+                  attack = {pokemon.stats[1].stat.name}
+                  defense = {pokemon.stats[2].stat.name}
+                  specialAttack = {pokemon.stats[3].stat.name}
+                  specialDefense = {pokemon.stats[4].stat.name}
+                  speed = {pokemon.stats[5].stat.name}
+                  hpBase = {pokemon.stats[0].base_stat}
+                  attackBase = {pokemon.stats[1].base_stat}
+                  defenseBase = {pokemon.stats[2].base_stat}
+                  specAtkBase = {pokemon.stats[3].base_stat}
+                  specDefBase = {pokemon.stats[4].base_stat}
+                  speedBase = {pokemon.stats[5].base_stat}
                   
                  />
             )}
