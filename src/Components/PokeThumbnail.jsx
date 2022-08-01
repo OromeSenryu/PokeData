@@ -1,8 +1,26 @@
 import React, { useState } from 'react'
 import Description from './Description'
 
-const PokeThumbnail = ({id,name,image,type,height,weight,healthPoints,attack,defense,specialAttack,specialDefense,speed,hpBase,attackBase,
-    defenseBase,specAtkBase,specDefBase,speedBase}) => {
+const PokeThumbnail = ({
+    id,
+    name,
+    image,
+    type,
+    height,
+    weight,
+    pokemonAbilities,
+    healthPoints,
+    attack,
+    defense,
+    specialAttack,
+    specialDefense,
+    speed,
+    hpBase,
+    attackBase,
+    defenseBase,
+    specAtkBase,
+    specDefBase,
+    speedBase}) => {
     const [show,setShow] = useState(false)
 
     return (
@@ -11,10 +29,12 @@ const PokeThumbnail = ({id,name,image,type,height,weight,healthPoints,attack,def
             <div className="detail-wrapper">
                 <h3>#0{id} {name.toUpperCase()}</h3>
                 <p>Type: {type.charAt(0).toUpperCase()+type.slice(1)}</p>
+                <p>Height: {height*10} cm</p>
+                <p>Weight: {weight*0.1} kg</p>
                 <button className="pokeinfo" onClick={()=>setShow(!show)}>{show===true?"Hide details":"Show details"}</button>
                 {show===true?<Description 
-                weightpok={weight} 
-                heightpok={height} 
+                pokemonAbilities={pokemonAbilities}
+
                 healthPoints={healthPoints}
                 attack={attack}
                 defense={defense}

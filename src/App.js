@@ -4,7 +4,7 @@ import PokeThumbnail from "./Components/PokeThumbnail";
 function App() {
   const [allPokemons,setAllPokemons] = useState([]);
   const [loadPoke,setLoadPoke] = useState('https://pokeapi.co/api/v2/pokemon?limit=20');
-  const getAllPokemons = async () =>{
+  const getAllPokemons = async () => {
     const res = await fetch(loadPoke)
     const data = await res.json()
     setLoadPoke(data.next)
@@ -29,6 +29,7 @@ function App() {
         <div className='all-container'>
         {allPokemons.map((pokemon,index)=> 
                  <PokeThumbnail
+                 
                   id = {pokemon.id}
                   name = {pokemon.name}
                   image = {pokemon.sprites.other.dream_world.front_default}
@@ -36,6 +37,7 @@ function App() {
                   key = {index}
                   height = {pokemon.height}
                   weight = {pokemon.weight}
+                  pokemonAbilities = {pokemon.abilities}
                   healthPoints = {pokemon.stats[0].stat.name}
                   attack = {pokemon.stats[1].stat.name}
                   defense = {pokemon.stats[2].stat.name}
